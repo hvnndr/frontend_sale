@@ -2,6 +2,7 @@ import sys
 
 from PyQt5.QtWidgets import QApplication
 
+
 from views.controllers import MainWindowController
 
 if __name__ == '__main__':

@@ -14,8 +14,14 @@ class MainWindowController(Ui_MainWindow, QMainWindow):
 
 
     def _login(self):
-        json_employee = self.service.search(router=f'employee/{self.lineedit_id_employee.text()}/')
-        print(json_employee['name'])
+        login_field = self.lineedit_id_employee.text()
+        password_field = self.lineedit_password.text()
+        json_employee = self.service.search(router=f'employee/{login_field}/')
+        if json_employee['id'] == login_field and json_employee['password'] == password_field :
+            pass
+
+
+
 
 
 
